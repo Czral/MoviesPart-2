@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="SEARCH">
+
+    <ListPreference
+        android:defaultValue="@string/popularity_value"
+        android:entries="@array/sort_by_list_labels"
+        android:entryValues="@array/sort_by_list_values"
+        android:key="@string/sort_by"
+        android:title="Sort by" />
+
+    <PreferenceCategory android:title="Search by">
+
+        <EditTextPreference
+            android:id="@+id/keyword_search"
+            android:inputType="text"
+            android:key="@string/keyword"
+            android:title="Keyword" />
+
+        <ListPreference
+            android:defaultValue="@string/all"
+            android:entries="@array/genre_list_labels"
+            android:entryValues="@array/genre_list_values"
+            android:key="@string/genre"
+            android:title="Genre" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
