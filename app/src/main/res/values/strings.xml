@@ -2,6 +2,7 @@
     <string name="app_name">Movies</string>
 
     <string name="sort_by_default">Popularity</string>
+    <string name="page">Page&#160;</string>
 
     <!-- Genre list -->
     <string name="all">All</string>
@@ -28,12 +29,38 @@
     <!-- Sort by list -->
     <string name="popularity">Popularity</string>
     <string name="vote_average">Vote Average</string>
+    <string name="favorites">Favorites</string>
 
     <string name="popularity_value" translatable="false">popularity.desc</string>
     <string name="vote_average_value" translatable="false">vote_average.desc</string>
+    <string name="favorites_values" translatable="false">favorites_movies</string>
 
     <string name="genre" translatable="false">genre</string>
     <string name="keyword" translatable="false">keyword</string>
     <string name="sort_by" translatable="false">sort_by</string>
+
+    <!-- Menu items -->
+    <string name="search">Search</string>
+    <string name="next_page">Next page</string>
+    <string name="previous_page">Previous page</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="share">Share</string>
+    <string name="add_to_favorites">Add to favorites</string>
+
+    <!-- Fragments Titles -->
+    <string name="details">Details</string>
+    <string name="videos">Videos</string>
+    <string name="reviews">Reviews</string>
+
+    <string name="no_internet_connection_error">No internet connection!!</string>
+    <string name="no_results_error">No results!!</string>
+    <string name="this_is_the_first_page_info">This is the first page.</string>
+    <string name="already_favorite">Already favorite</string>
+    <string name="movie_poster_description" translatable="false">Movie poster</string>
+    <string name="empty_icon_description" translatable="false">Empty layout image</string>
+    <string name="video_image_description" translatable="false">Video icon</string>
+    <string name="delete_all">Delete all favorites</string>
+    <string name="release_date">Release date:&#160;&#160;&#160;</string>
 
 </resources>

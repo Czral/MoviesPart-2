@@ -1,14 +1,14 @@
-package com.example.android.movies;
+package com.example.android.movies.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
+import com.example.android.movies.Files.MovieFile;
+import com.example.android.movies.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -19,23 +19,23 @@ import java.util.ArrayList;
 
 public class GridAdapter extends BaseAdapter {
 
-    Context mContext;
-    ArrayList<ImageMovie> imageMovieArrayList;
+    private Context mContext;
+    private ArrayList<MovieFile> movieFileArrayList;
 
-    public GridAdapter(Context context, ArrayList<ImageMovie> imageMovies) {
+    public GridAdapter(Context context, ArrayList<MovieFile> movieFiles) {
 
         mContext = context;
-        imageMovieArrayList = imageMovies;
+        movieFileArrayList = movieFiles;
     }
 
     @Override
     public int getCount() {
-        return imageMovieArrayList.size();
+        return movieFileArrayList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return imageMovieArrayList.get(position);
+        return movieFileArrayList.get(position);
     }
 
     @Override
@@ -56,12 +56,12 @@ public class GridAdapter extends BaseAdapter {
 
         ImageView imageView = gridView.findViewById(R.id.image_view_list);
 
-        if (imageMovieArrayList.get(position) == null || imageMovieArrayList.get(position).getImageUrl() == null) {
-            imageView.setImageResource(R.mipmap.ic_launcher);
+        if (movieFileArrayList.get(position) == null || movieFileArrayList.get(position).getImage() == null) {
+            imageView.setImageResource(R.drawable.no_poster);
         } else {
             Picasso.get().
-                    load("http://image.tmdb.org/t/p/w500/" + imageMovieArrayList.get(position).getImageUrl())
-                    .error(R.mipmap.ic_launcher).into(imageView);
+                    load("http://image.tmdb.org/t/p/w500/" + movieFileArrayList.get(position).getImage())
+                    .error(R.drawable.no_poster).into(imageView);
 
         }
         return gridView;

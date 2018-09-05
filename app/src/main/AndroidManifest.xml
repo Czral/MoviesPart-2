@@ -12,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:launchMode="singleTop"
-            android:configChanges="locale|orientation" >
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="locale|orientation"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,13 +23,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailActivity"
-            android:configChanges="locale|orientation"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".SettingsActivity"
             android:configChanges="locale|orientation"
+            android:label="Settings"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FavoriteActivity"
+            android:label="Favorites"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DetailsActivity"
+            android:configChanges="locale|orientation"
+            android:label="Movie Info"
+            android:parentActivityName=".MainActivity" >
+
+        </activity>
     </application>
 
 </manifest>
