@@ -15,6 +15,7 @@ import android.support.v4.app.ShareCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -243,5 +244,23 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        Log.d("ROMI RAIN", "On Destroy!");
+
+        bundle.clear();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        Log.d("ROMI RAIN", "On Pause!");
+
+        bundle.clear();
     }
 }

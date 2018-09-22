@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity
     private static final String API = "api_key";
 
     //TODO: Insert API-KEY here:
-    public static final String API_KEY = "";
+    public static final String API_KEY = "090b775fc2af47d4507247171f907d56";
     private static final String PAGE = "page";
 
     public static final String RELEASE = "RELEASE";

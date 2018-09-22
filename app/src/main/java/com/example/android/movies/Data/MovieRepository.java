@@ -4,6 +4,8 @@ import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 
+import com.example.android.movies.Files.Reviews;
+
 import java.util.List;
 
 /**
@@ -14,6 +16,7 @@ public class MovieRepository {
 
     private MovieDao mMovieDao;
     private LiveData<List<FavoriteMovie>> mAllMovies;
+    private LiveData<List<Reviews>> mAllReviews;
 
     MovieRepository(Application application) {
 
