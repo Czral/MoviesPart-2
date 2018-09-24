@@ -250,16 +250,12 @@ public class DetailsActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        Log.d("ROMI RAIN", "On Destroy!");
-
         bundle.clear();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
-        Log.d("ROMI RAIN", "On Pause!");
 
         bundle.clear();
     }
