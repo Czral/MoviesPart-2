@@ -96,16 +96,15 @@ public class MainActivity extends AppCompatActivity
 
         ButterKnife.bind(this);
 
+        listView.setEmptyView(emptyLayout);
+
+        i++;
+
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             listView.setNumColumns(3);
         } else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             listView.setNumColumns(2);
         }
-
-        listView.setEmptyView(emptyLayout);
-
-        i++;
-
         setup();
 
         adapter = new GridAdapter(this, new ArrayList<MovieFile>());

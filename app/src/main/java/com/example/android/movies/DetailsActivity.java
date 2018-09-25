@@ -4,6 +4,7 @@ import android.app.LoaderManager;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.res.Configuration;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
@@ -246,17 +247,4 @@ public class DetailsActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        bundle.clear();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        bundle.clear();
-    }
 }

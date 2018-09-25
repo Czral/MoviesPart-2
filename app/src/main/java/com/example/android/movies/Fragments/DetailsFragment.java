@@ -3,12 +3,13 @@ package com.example.android.movies.Fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.android.movies.MainActivity;
@@ -57,6 +58,7 @@ public class DetailsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         Bundle bundle = getArguments();
         String name = bundle.getString(MainActivity.TITLE);
         String image = bundle.getString(MainActivity.IMAGE);
@@ -75,7 +77,6 @@ public class DetailsFragment extends Fragment {
         Picasso.get().load("http://image.tmdb.org/t/p/w500/" + image).
                 error(R.drawable.no_poster).
                 into(posterView);
-
 
         // Overview
         overviewView.setText(overview);
